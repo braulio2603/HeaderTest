@@ -12,10 +12,10 @@ public class BaseTest {
     public void openBrowser() throws InterruptedException {
 
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.get("http://microsoft.com");
         driver.manage().window().maximize();
-        Thread.sleep(15000);
+        //Thread.sleep(15000);
     }
 /*@AfterTest
 public void cerrarBrowser(){

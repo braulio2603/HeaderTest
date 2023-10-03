@@ -12,11 +12,11 @@ import java.util.stream.Collectors;
 
 public class HeaderTest extends BaseTest {
 
-    @Test(testName = "Validar el header de Microsoft", description = "Validar que existan los elementos del header en la pagina principal de Microsofts")
+    @Test (testName= "Validar el header de Microsoft", description = "Validar que existan los elementos del header en la pagina principal de Microsofts")
 
     public void validateHeader() {
-        String[] menuList = {"Microsoft 360", "Teams", "Windows", "Surface", "Xbox", "Soporte"};
-        WebElement menuElement = getDriver().findElement(By.cssSelector("uhf-g-nav > ul"));
+        String[] menuList = {"Microsoft 365", "Teams", "Windows", "Surface", "Xbox", "Soporte"};
+        WebElement menuElement = getDriver().findElement(By.cssSelector("#uhf-g-nav > ul"));
         List<WebElement> myList = menuElement.findElements(By.tagName("a"));
         //List<String> myList = menuElement.findElements(By.tagName("a")).stream().map(WebElement::getText)
         //      .collect(Collectors.toList());
